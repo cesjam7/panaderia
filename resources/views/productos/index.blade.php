@@ -1,6 +1,7 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
-@section('content')
+@section('content') --}}
+
     <div class="row page-titles">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Productos</a></li>
@@ -30,7 +31,7 @@
                 <div class="cm-content-body form excerpt">
                     <div class="card-body pb-4">
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table" border="1" width="100%">
                                 <thead>
                                     <tr>
                                         <th>Nombre</th>
@@ -69,4 +70,4 @@
             </div>
         </div>
     </div>
-@endsection
+{{-- @endsection --}}

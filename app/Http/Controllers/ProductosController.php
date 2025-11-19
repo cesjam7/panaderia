@@ -32,16 +32,13 @@ class ProductosController extends Controller
         $data = $request->validate([
             'nombre' => 'required|string|max:200',
             'descripcion' => 'nullable|string',
-            'precio' => 'required|numeric',
-            'stock' => 'required|integer',
+            'precio_venta' => 'required|numeric',
+            'stock_actual' => 'required|integer',
+            'stock_minimo' => 'required|integer',
+            'unidad_medida' => 'required|string',
         ]);
         //return dd($data);
-        Producto::create([
-            'nombre' => $data['nombre'],
-            'descripcion' => $data['descripcion'] ?? null,
-            'precio' => $data['precio'],
-            'stock' => $data['stock'],
-        ]);
+        Producto::create($data);
         return redirect()->route('productos.index')->with('success', 'Producto creado exitosamente.');
     }
 

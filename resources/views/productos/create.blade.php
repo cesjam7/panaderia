@@ -1,6 +1,6 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
-@section('content')
+@section('content') --}}
     <div class="page-titles">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0)">Productos</a></li>
@@ -34,12 +34,25 @@
                                     <textarea name="descripcion" class="form-control" placeholder="Descripción"></textarea>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">Precio</label>
-                                    <input type="number" step="0.01" class="form-control" name="precio" placeholder="Precio" required>
+                                    <label class="form-label">Precio de venta</label>
+                                    <input type="number" step="0.01" class="form-control" name="precio_venta" required>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Stock</label>
-                                    <input type="number" class="form-control" name="stock" placeholder="Stock" required>
+                                    <input type="number" class="form-control" name="stock_actual" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Stock mínimo</label>
+                                    <input type="number" class="form-control" name="stock_minimo" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Unidad de medida</label>
+                                    <select class="form-control" name="unidad_medida" required>
+                                        <option value="unidad">Unidad</option>
+                                        <option value="kg">Kilogramo</option>
+                                        <option value="litro">Litro</option>
+                                        <option value="metro">Metro</option>
+                                    </select>
                                 </div>
                                 <button class="btn btn-primary" type="submit">Crear Producto</button>
                             </form>
@@ -49,4 +62,4 @@
             </div>
         </div>
     </div>
-@endsection
+{{-- @endsection --}}

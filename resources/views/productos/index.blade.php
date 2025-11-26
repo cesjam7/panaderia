@@ -1,6 +1,6 @@
-{{-- @extends('layouts.app')
+@extends('layouts.app')
 
-@section('content') --}}
+@section('content')
 
     <div class="row page-titles">
         <ol class="breadcrumb">
@@ -70,4 +70,4 @@
             </div>
         </div>
     </div>
-{{-- @endsection --}}
+@endsection
